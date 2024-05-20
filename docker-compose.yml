@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  database:
+    build:
+      context: ./database
+  
+  autentication:
+    build:
+      context: ./autentication
+    depends_on: 
+      - database
